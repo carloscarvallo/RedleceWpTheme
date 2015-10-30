@@ -106,7 +106,7 @@ nav {
 
 a#logo-container.brand-logo img {
   padding-top: 40px;
-  width: 30%;
+  width: 300px;
 }
 
 nav ul a {
@@ -125,7 +125,7 @@ h6 {
 }
 
 p.center-align {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
 .dotted {
@@ -137,7 +137,7 @@ p.center-align {
 }
 
 .footer-img {
-  width: 100%;
+  width: 80%;
 }
 
 footer.page-footer {
@@ -152,3 +152,6 @@ p.footer {
   font-size: 1.1rem;
   margin: 0;
 }
+
+nav ul li:hover, nav ul li.active {
+  background-color: rgba(0, 0, 0, 0) }
