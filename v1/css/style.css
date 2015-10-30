@@ -8,7 +8,7 @@
 
 nav ul a,
 nav .brand-logo {
-  color: #F44336 !important;
+  color: #D50000 !important;
 }
 
 .button-collapse {
@@ -99,7 +99,7 @@ html {
 }
 
 nav {
-  border-top: 10px solid red;
+  border-top: 10px solid #D50000;
   height: 200px;
   line-height: 200px;
 }
@@ -129,7 +129,7 @@ p.center-align {
 }
 
 .dotted {
-  border-top: 2px dotted red;
+  border-top: 2px dotted #D50000;
 }
 
 .container.margin {
@@ -141,7 +141,7 @@ p.center-align {
 }
 
 footer.page-footer {
-  border-top: 10px solid red;
+  border-top: 10px solid #D50000;
   padding-top: 60px;
   padding-left: 80px;
   padding-right: 80px;
