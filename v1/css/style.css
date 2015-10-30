@@ -1,0 +1,154 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+nav ul a,
+nav .brand-logo {
+  color: #D50000 !important;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+/**/
+/**/
+/**/
+/**/
+/**/
+
+@font-face {
+  font-family: 'Rambla';
+  src: url('../fonts/Rambla/Rambla-Regular.eot');
+  src: url('../fonts/Rambla/Rambla-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Rambla/Rambla-Regular.woff2') format('woff2'),
+       url('../fonts/Rambla/Rambla-Regular.woff') format('woff'),
+       url('../fonts/Rambla/Rambla-Regular.ttf') format('truetype'),
+       url('../fonts/Rambla/Rambla-Regular.svg#Rambla-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rambla-Bold';
+  src: url('../fonts/Rambla/Rambla-Bold.eot');
+  src: url('../fonts/Rambla/Rambla-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Rambla/Rambla-Bold.woff2') format('woff2'),
+       url('../fonts/Rambla/Rambla-Bold.woff') format('woff'),
+       url('../fonts/Rambla/Rambla-Regular.ttf') format('truetype'),
+       url('../fonts/Rambla/Rambla-Bold.svg#Rambla-Bold') format('svg');
+  font-weight: bold;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'FiraSans';
+  src: url('../fonts/FiraSans/FiraSans-Regular.eot');
+  src: url('../fonts/FiraSans/FiraSans-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/FiraSans/FiraSans-Regular.woff2') format('woff2'),
+       url('../fonts/FiraSans/FiraSans-Regular.woff') format('woff'),
+       url('../fonts/FiraSans/FiraSans-Regular.ttf') format('truetype'),
+       url('../fonts/FiraSans/FiraSans-Regular.svg#FiraSans-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-family: 'Rambla';
+}
+
+nav {
+  border-top: 10px solid #D50000;
+  height: 200px;
+  line-height: 200px;
+}
+
+a#logo-container.brand-logo img {
+  padding-top: 40px;
+  width: 30%;
+}
+
+nav ul a {
+  font-size: 1.4rem;
+  padding: 0 7.5px;
+}
+
+h4, h5 {
+  font-weight: 600;
+  letter-spacing: 1.4px;
+}
+
+h6 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+p.center-align {
+  font-size: 1.4rem;
+}
+
+.dotted {
+  border-top: 2px dotted #D50000;
+}
+
+.container.margin {
+  margin: 30px auto;
+}
+
+.footer-img {
+  width: 100%;
+}
+
+footer.page-footer {
+  border-top: 10px solid #D50000;
+  padding-top: 60px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 10px;
+}
+
+p.footer {
+  font-size: 1.1rem;
+  margin: 0;
+}
