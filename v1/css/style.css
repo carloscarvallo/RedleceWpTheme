@@ -105,7 +105,9 @@ footer.page-footer {
 .cremita {
     background-color: #f6eccc !important;
 }
-
+.cremita-claro {
+    background-color: #fcf7ed !important;
+}
 html {
   font-family: 'Rambla';
 }
@@ -185,4 +187,10 @@ hr {
   border: 0;
   background-color: #D50000 !important;
   height: 1px;
+}
+.dotted.center span {
+  padding: 5px 10px;
+  font-size: 20px;
+  position: relative;
+  top: -10px;
 }
