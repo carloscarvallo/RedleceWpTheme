@@ -98,6 +98,10 @@ footer.page-footer {
     background-color: #e7b909 !important;
 }
 
+.anaranjadito-text {
+   color: #e7b909 !important;
+}
+
 .cremita {
     background-color: #f6eccc !important;
 }
@@ -132,7 +136,7 @@ h6 {
   font-weight: bold;
 }
 
-p.center-align {
+p.center-align, p.left-align {
   font-size: 1.3rem;
 }
 
@@ -142,6 +146,7 @@ p.center-align {
 
 .container.margin {
   margin: 30px auto;
+  margin-bottom: 0px;
 }
 
 .footer-img {
@@ -163,3 +168,21 @@ p.footer {
 
 nav ul li:hover, nav ul li.active {
   background-color: rgba(0, 0, 0, 0) }
+
+.col.s3 img.responsive-img {
+  object-fit: cover;
+  /*object-position: center;*/
+  height: 100%;
+}
+.col.s3.image {
+  height: 250px;
+}
+.image-container {
+  height: 260px;
+  overflow: hidden;
+}
+hr {
+  border: 0;
+  background-color: #D50000 !important;
+  height: 1px;
+}
