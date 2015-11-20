@@ -30,7 +30,10 @@ get_header(); ?>
           <br><br>
         </div>
       </div>
-      <div class="parallax"><img src="v1/images/img15.jpg" alt="Unsplashed background img 1"></div>
+      <div class="parallax">
+        <?php the_post_thumbnail(); ?>
+        <!-- <img src="v1/images/img15.jpg" alt="Unsplashed background img 1"> -->
+      </div>
     </div>
 
 			<?php// the_content(); ?>

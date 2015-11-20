@@ -21,6 +21,9 @@ function redlece_theme_setup() {
 }
 
 add_action('init', 'redlece_theme_setup');
+add_theme_support('post-thumbnails');
+
+
 
 
 ?>
