@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Awesome Theme</title>
+		<title>Red Latinoamericana de Educación en Contextos de Encierro</title>
 		<?php wp_head(); ?>
 	</head>
 
