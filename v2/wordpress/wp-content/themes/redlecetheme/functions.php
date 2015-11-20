@@ -21,3 +21,10 @@ function redlece_theme_setup() {
 }
 
 add_action('init', 'redlece_theme_setup');
+
+function wp_nav_menu_attributes_filter($var) {
+	return is_array($var) ? array_intersect($var, array('current-menu-item')) : '';
+}
+add_filter('nav_menu_css_class', 'wp_nav_menu_attributes_filter', 100, 1);
+add_filter('nav_menu_item_id', 'wp_nav_menu_attributes_filter', 100, 1);
+add_filter('page_css_class', 'wp_nav_menu_attributes_filter', 100, 1);

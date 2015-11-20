@@ -20,8 +20,7 @@
 	<body <?php body_class( $awesome_classes ); ?>>
     <nav class="white" role="navigation">
       <div class="nav-wrapper container">
-        <a id="logo-container" href="index.html" class="brand-logo"> <img src="<?php bloginfo('template_url')?>/images/logon.jpg" alt="Logo"> </a>
-        <!-- <ul class="right hide-on-med-and-down"> -->
+        <a id="logo-container" href="/redleceweb/v2/wordpress/" class="brand-logo"><img src="<?php bloginfo('template_url')?>/images/logon.jpg" alt="Logo"></a>
 
           <?php
             wp_nav_menu(array(
@@ -31,17 +30,6 @@
               )
             );
           ?>
-
-          <!-- <li><a href="acercade.html">ACERCA DE</a></li>
-          <li><a href="#">/</a></li>
-          <li><a href="red.html">RED</a></li>
-          <li><a href="#">/</a></li>
-          <li><a href="#" class="grey-text">NOTICIAS</a></li>
-          <li><a href="#">/</a></li>
-          <li><a href="#" class="grey-text">DOCUMENTOS</a></li>
-          <li><a href="#">/</a></li>
-          <li><a href="#contacto">CONTACTO</a></li>
-        </ul> -->
 
         <ul id="nav-mobile" class="side-nav">
           <li><a href="#">Navbar Link</a></li>
