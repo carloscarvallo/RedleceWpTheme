@@ -6,10 +6,21 @@
 		<?php wp_head(); ?>
 	</head>
 
-	<body>
+	<?php
+
+		if ( is_front_page() ):
+			$redlece_class = array ( 'redlece-class', 'my-class' );
+		else:
+			$redlece_class = array ( 'no-redlece-class' );
+		endif;
+
+	?>
+
+	<body <?php body_class( $redlece_class ); ?>>
+
 		<nav class="white" role="navigation">
       <div class="nav-wrapper container">
-        <a id="logo-container" href="index.html" class="brand-logo"> <img src="<?php bloginfo('template_url')?>/images/logon.jpg" alt="Logo"> </a>
+        <a id="logo-container" href="<?php bloginfo('template_url')?>" class="brand-logo"> <img src="<?php bloginfo('template_url')?>/images/logon.jpg" alt="Logo"> </a>
 
           <?php
             wp_nav_menu(array(
