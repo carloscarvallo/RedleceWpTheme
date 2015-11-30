@@ -4,14 +4,9 @@
 
 	if( have_posts() ):
 
-		while( have_posts() ): the_post(); ?>
+		while( have_posts() ): the_post();?>
 
-			<h3><?php the_title(); ?></h3>
-			<small>Posted on: <?php the_time(); ?> en <?php the_category(); ?></small>
-
-			<p><?php the_content(); ?></p>
-
-			<hr>
+      <?php get_template_part('content',get_post_format()); ?>
 
 		<?php endwhile;
 

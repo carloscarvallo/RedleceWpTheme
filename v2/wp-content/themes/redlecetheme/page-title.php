@@ -32,7 +32,6 @@ get_header(); ?>
       </div>
       <div class="parallax">
         <?php the_post_thumbnail(); ?>
-        <!-- <img src="v1/images/img15.jpg" alt="Unsplashed background img 1"> -->
       </div>
     </div>
 
