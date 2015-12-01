@@ -5,14 +5,33 @@
     <div class="col s6">
 
       <?php
+        //loop para los ultimos post de cada categoria
+        /*$args_cat = array(
+          'include' => '1, 5, 6'
+        );
 
-        $lastBlog = new WP_Query('type=post&posts_per_page=1');
+        $categories = get_categories($args_cat);
+        //var_dump($categories);
+        foreach($categories as $category):
+
+        endforeach;*/
+
+        //MOSTRARA SOLO UNA CATEGORIA
+        $args = array(
+          'type' => 'post',
+          'posts_per_page' => 3,
+          'category__in' => array( 1 ),
+        );
+
+        $lastBlog = new WP_Query( $args );
 
         if( $lastBlog->have_posts() ):
 
 		      while( $lastBlog->have_posts() ): $lastBlog->the_post();?>
 
-            <?php get_template_part('content',get_post_format()); ?>
+            <?php get_template_part('content','featured'); ?>
+
+            <?php// get_template_part('content',get_post_format()); ?>
 
 		      <?php endwhile;
 
@@ -37,7 +56,7 @@
 		      <?php endwhile;
 
 	      endif;
-
+/*
         //PRINT OTHER 2 POSTS NO EL PRIMERO
         $args = array(
           'type' => 'post',
@@ -57,12 +76,13 @@
 	      endif;
 
         wp_reset_postdata();
-
+*/
 	    ?>
 
       <hr>
 
       <?php
+/*
       //IMPRIMIR SOLO ROCKABILLY
 
       $lastBlog = new WP_Query('type=post&posts_per_page=-1&cat=6');
@@ -78,7 +98,7 @@
       endif;
 
       wp_reset_postdata();
-
+*/
     ?>
 
     </div>
