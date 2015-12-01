@@ -31,7 +31,7 @@ get_header(); ?>
         </div>
       </div>
       <div class="parallax">
-        <?php the_post_thumbnail(); ?>
+        <?php the_post_thumbnail('full'); ?>
       </div>
     </div>
 
@@ -148,7 +148,7 @@ get_header(); ?>
 
 			<?php// get_template_part('content','featured'); ?>
 
-			  <?php get_template_part('content',get_post_format()); ?>
+			  <?php get_template_part('content','image'); ?>
 
 		<?php endwhile;
 
