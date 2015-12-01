@@ -29,6 +29,7 @@ get_header(); ?>
     <?php endwhile;
 
   endif;
+  wp_reset_postdata();
 
   ?>
 
@@ -68,24 +69,34 @@ get_header(); ?>
   <div class="col s7 offset-s1">
     <br><br>
     <hr>
-    <h4 class="red-text text-accent-4 left-align">ARGENTINA</h4>
-    <br>
-    <div class="card anaranjadito">
-      <div class="card-image">
-        <img src="v1/images/imagen5.jpg">
-        <span class="card-title">Ministerio de Educación, Ciencia y Tecnologías de la Nación</span>
-      </div>
-      <div class="card-action white-text">
-        <p>www.me.gov.varbr<br>
-          <hr class="white-hr">
-          Pizzumo 935.<br>
-          (1020) Ciudad Autonoma <br>
-          de Buenos Aires <br>
-          <hr class="white-hr">
-          (54-11) 4129-1000
-        </p>
-      </div>
-    </div>
+
+    <?php
+  	//MOSTRARA SOLO UNA CATEGORIA
+  	$args = array(
+  		'post_type' => 'pais',
+  		'posts_per_page' => 4,
+  		'category__in' => array( 7 ),
+  	);
+
+  	$lastBlog = new WP_Query( $args );
+
+  	if( $lastBlog->have_posts() ):
+
+  		while( $lastBlog->have_posts() ): $lastBlog->the_post();?>
+
+  			<?php// get_template_part('content','featured'); ?>
+
+  			  <?php get_template_part('content','card'); ?>
+
+  		<?php endwhile;
+
+  	endif;
+
+  	wp_reset_postdata();
+
+  	?>
+
+
   </div>
 <!--
   <div class="col s7 offset-s4">
@@ -118,57 +129,5 @@ get_header(); ?>
 </div>
 
 <!-- ========================================================================= -->
-
-
-
-<div class="container margin">
-  <div class="row">
-
-	  <div class="col s12">
-		  <hr>
-		  <h4 class="red-text text-accent-4 center">ULTIMAS NOTICIAS</h4>
-		  <br><br>
-	<?php
-
-	//loop para los ultimos post de cada categoria
-	/*$args_cat = array(
-		'include' => '1, 5, 6'
-	);
-
-	$categories = get_categories($args_cat);
-	//var_dump($categories);
-	foreach($categories as $category):
-
-	endforeach;*/
-
-	//MOSTRARA SOLO UNA CATEGORIA
-	$args = array(
-		'type' => 'post',
-		'posts_per_page' => 3,
-		'category__in' => array( 1 ),
-	);
-
-	$lastBlog = new WP_Query( $args );
-
-	if( $lastBlog->have_posts() ):
-
-		while( $lastBlog->have_posts() ): $lastBlog->the_post();?>
-
-			<?php// get_template_part('content','featured'); ?>
-
-			  <?php get_template_part('content','image'); ?>
-
-		<?php endwhile;
-
-	endif;
-
-	wp_reset_postdata();
-
-	?>
-	</div>
-
-</div>
-
-</div>
 
 <?php get_footer(); ?>
