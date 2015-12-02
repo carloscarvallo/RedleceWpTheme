@@ -57,6 +57,17 @@ add_filter( 'post_thumbnail_html', 'remove_img_attr' );
 
 /*
     ======================================================
+    Habilita extracto para pages
+    ======================================================
+*/
+
+function wpcodex_add_excerpt_support_for_pages() {
+	add_post_type_support( 'page', 'excerpt' );
+}
+add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
+
+/*
+    ======================================================
     Sidebar function
     ======================================================
 */
