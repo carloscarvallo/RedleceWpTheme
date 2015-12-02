@@ -1,14 +1,18 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<div class="col s12">
+  <div class="image-container titular">
 
   <?php if( has_post_thumbnail() ): ?>
+    <a href="<?php the_permalink(); ?>">
+      <?php
 
-    <div class="thumbnail"> <?php the_post_thumbnail('thumbnail'); ?> </div>
+      $img_attr = array('class' => 'responsive-img thumb-titular');
+
+      the_post_thumbnail('full', $img_attr); ?>
 
   <?php endif; ?>
-
-  <?php the_title( sprintf('<h2 class="entry-title"><a href="%s">', esc_url( get_permalink() ) ), '</a></h2>'); ?>
-
-  <small><?php the_category(); ?></small>
-
-</article>
-<hr>
+  </div>
+  <br>
+    <?php the_title(sprintf('<h2 class="red-text text-accent-4 center header-title"><a href="%s">', esc_url( get_permalink() ) ), '</a></h2>'); ?>
+  <hr>
+  <br><br>
+</div>
