@@ -59,7 +59,7 @@ class Walker_Nav_Header extends Walker_Nav_menu {
 		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
 
 		$classes[] = ($args->walker->has_children) ? 'dropdown' : '';
-		$classes[] = ($item->current || $item->current_item_anchestor) ? 'anaranjadito-text' : '';
+		$classes[] = ($item->current || $item->current_item_anchestor) ? 'active' : '';
 		$classes[] = 'menu-item-' . $item->ID;
 		if( $depth && $args->walker->has_children ){
 			$classes[] = 'dropdown-submenu';
@@ -78,6 +78,7 @@ class Walker_Nav_Header extends Walker_Nav_menu {
 		$attributes .= ! empty( $item->xfn ) ? ' rel="' . esc_attr($item->xfn) . '"' : '';
 		$attributes .= ! empty( $item->url ) ? ' href="' . esc_attr($item->url) . '"' : '';
 
+    $attributes .= ($item->current || $item->current_item_anchestor) ? 'class="anaranjadito-text"' : '';
 		$attributes .= ( $args->walker->has_children ) ? ' class="dropdown-toggle" data-toggle="dropdown"' : '';
 
 		$item_output = $args->before;
