@@ -197,3 +197,7 @@ td {
   font-size: 17px;
   padding: 5px 5px;
 }
+
+a {
+  color: #D50000 !important;
+}
