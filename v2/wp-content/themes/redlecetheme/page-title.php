@@ -136,7 +136,7 @@ get_header(); ?>
 	//MOSTRARA SOLO UNA CATEGORIA
 	$args = array(
 		'type' => 'post',
-		'posts_per_page' => 3,
+		'posts_per_page' => 2,
 		'category__in' => array( 1 ),
 	);
 

@@ -41,6 +41,7 @@ get_header(); ?>
 
   <div class="row">
     <div class="col s2 offset-s1">
+		<br>
     <table class="bordered highlight">
     <tbody>
       <tr><td>Argentina</td></tr>
