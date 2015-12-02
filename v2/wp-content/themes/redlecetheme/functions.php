@@ -68,6 +68,18 @@ add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
 
 /*
     ======================================================
+    Estilos para el excerpt del wordpress
+    ======================================================
+*/
+
+function  wpc_custom_excerpt ( $excerpt )  {
+  $excerpt  =  str_replace ("<p",  "<p class = \"center-align red-text text-accent-4 \"",  $excerpt);
+  return  $excerpt ;
+}
+add_filter( 'the_excerpt' , 'wpc_custom_excerpt' ) ;
+
+/*
+    ======================================================
     Sidebar function
     ======================================================
 */

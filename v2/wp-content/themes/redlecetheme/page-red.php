@@ -93,34 +93,41 @@ get_header(); ?>
 
   	?>
   </div>
-<!--
-  <div class="col s7 offset-s4">
-    <br><br>
-    <hr>
-    <h4 class="red-text text-accent-4 left-align">BRASIL</h4>
-    <br>
-    <div class="card anaranjadito">
-      <div class="card-image">
-        <img src="v1/images/imagen5.jpg">
-        <span class="card-title">Ministerio de Educación, Ciencia y Tecnologías de la Nación</span>
-      </div>
-      <div class="card-action white-text">
-        <p>www.me.gov.varbr<br>
-          <hr class="white-hr">
-          Pizzumo 935.<br>
-          (1020) Ciudad Autonoma <br>
-          de Buenos Aires <br>
-          <hr class="white-hr">
-          (54-11) 4129-1000
-        </p>
-      </div>
-    </div>
-  </div>
--->
-
 </div>
 
 
+</div>
+
+<div class="section cremita">
+	<div class="container margin">
+		<div class="row">
+
+			<?php
+
+			$args = array(
+				'post_type' => 'page',
+				'posts_per_page' => 2,
+				'post__in' => array(10,14)
+			);
+
+			$lastBlog = new WP_Query( $args );
+
+			if( $lastBlog->have_posts() ):
+
+				while( $lastBlog->have_posts() ): $lastBlog->the_post();?>
+
+					  <?php get_template_part('content','extracto'); ?>
+
+				<?php endwhile;
+
+			endif;
+
+			wp_reset_postdata();
+
+			?>
+
+		</div>
+	</div>
 </div>
 
 <!-- ========================================================================= -->

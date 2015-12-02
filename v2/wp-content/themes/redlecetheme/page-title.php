@@ -80,30 +80,7 @@ get_header(); ?>
 								<br><br>
 								</div>
 						</div>
-<!--
-						<div class="col s12">
-							<hr>
-							<h4 class="red-text text-accent-4 center">ULTIMAS NOTICIAS</h4>
-							<br><br>
-							<div class="col s12 m6">
-								<div class="image-container">
-									<img class="responsive-img" src="v1/images/imagen2-1.jpg" alt="">
-								</div>
-								<h5 class="center red-text text-accent-4">Otro titular que puede tener hasta dos lineas máximo</h5>
-								<br><br>
-							</div>
 
-						  <div class="col s12 m6">
-							  <div class="image-container">
-								  <img class="responsive-img" src="v1/images/imagen3.jpg" alt="">
-							  </div>
-								  <h5 class="center red-text text-accent-4">Otro titular que puede tener hasta dos lineas máximo</h5>
-						  </div>
-						</div>
--->
-					</div>
-				</div>
-			</div>
 
 <!-- ========================================================================= -->
 
@@ -113,8 +90,7 @@ get_header(); ?>
 	endif;
 
 	?>
-<div class="container margin">
-  <div class="row">
+
 
 	  <div class="col s12">
 		  <hr>
@@ -161,6 +137,40 @@ get_header(); ?>
 
 </div>
 
+</div>
+
+</div>
+
+<div class="section cremita">
+	<div class="container margin">
+		<div class="row">
+
+			<?php
+
+			$args = array(
+				'post_type' => 'page',
+				'posts_per_page' => 2,
+				'post__in' => array(10,14)
+			);
+
+			$lastBlog = new WP_Query( $args );
+
+			if( $lastBlog->have_posts() ):
+
+				while( $lastBlog->have_posts() ): $lastBlog->the_post();?>
+
+					  <?php get_template_part('content','extracto'); ?>
+
+				<?php endwhile;
+
+			endif;
+
+			wp_reset_postdata();
+
+			?>
+
+		</div>
+	</div>
 </div>
 
 <?php get_footer(); ?>
