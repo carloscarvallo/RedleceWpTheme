@@ -27,8 +27,8 @@ function redlece_theme_setup() {
 
 	add_theme_support('menus');
 
-	register_nav_menu('header-menu', 'Header Navigation');
-	register_nav_menu('footer-menu', 'Footer Navigation');
+	register_nav_menu('header', 'Header Navigation');
+	register_nav_menu('footer', 'Footer Navigation');
 
 }
 
@@ -65,6 +65,13 @@ function redlece_widget_setup() {
 }
 
 add_action('widgets_init','redlece_widget_setup');
+
+/*
+    ======================================================
+    Post Types
+    ======================================================
+*/
+
 
 add_action( 'init', 'pais_init' );
 
@@ -105,5 +112,13 @@ function pais_init() {
 
         register_post_type( 'pais', $args );
 };
+
+/*
+    ======================================================
+    Include Walker File
+    ======================================================
+*/
+
+require get_template_directory() . '/inc/walker.php';
 
 ?>
