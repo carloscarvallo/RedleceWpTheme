@@ -67,14 +67,10 @@ get_header(); ?>
   </div>
 
   <div class="col s7 offset-s1">
-    <br><br>
-    <hr>
-
     <?php
   	//MOSTRARA SOLO UNA CATEGORIA
   	$args = array(
   		'post_type' => 'pais',
-  		'posts_per_page' => 4,
   		'category__in' => array( 7 ),
   	);
 
@@ -95,8 +91,6 @@ get_header(); ?>
   	wp_reset_postdata();
 
   	?>
-
-
   </div>
 <!--
   <div class="col s7 offset-s4">

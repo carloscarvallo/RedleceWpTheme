@@ -1,13 +1,13 @@
 <!-- <h4 class="red-text text-accent-4 left-align">ARGENTINA</h4> -->
-<?php the_title(sprintf('<h4 class="center red-text text-accent-4 left-align"><a href="%s">', esc_url( get_permalink() ) ), '</a></h5>'); ?>
+<br><br>
+<hr>
+<?php the_title(sprintf('<h4 class="red-text text-accent-4 left-align"><a href="%s">', esc_url( get_permalink() ) ), '</a></h5>'); ?>
 <br>
 <div class="card anaranjadito">
   <div class="card-image">
-    <!-- <img src="v1/images/imagen5.jpg"> -->
 
     <?php if( has_post_thumbnail() ): ?>
       <a href="<?php the_permalink(); ?>">
-      <!-- <img class="responsive-img" src="" alt=""> -->
         <?php
         the_post_thumbnail('full'); ?>
     <?php endif; ?>
