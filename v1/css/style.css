@@ -19,6 +19,14 @@ nav .brand-logo {
     width: 100%;
   }
 
+.section {
+  padding-top: 0;
+}
+
+.section.cremita {
+  padding-top: 1rem;
+}
+
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
     position: absolute;
@@ -122,6 +130,10 @@ nav ul a {
   padding: 0 7.5px;
 }
 
+.header-title {
+  font-weight: bold;
+}
+
 h4, h5 {
   font-weight: 600;
   letter-spacing: 1.4px;
@@ -171,13 +183,25 @@ nav ul li:hover, nav ul li.active {
   /*object-position: center;*/
   height: 100%;
 }
+
+.thumb-titular {
+  width: 100%;
+}
+
 .col.s3.image, .col.s4.image {
   height: 250px;
 }
+
 .image-container {
   height: 260px;
   overflow: hidden;
 }
+
+.titular {
+  height: 550px;
+  border-top: 20px solid #e7b909;
+}
+
 hr {
   border: 0;
   background-color: #D50000 !important;
