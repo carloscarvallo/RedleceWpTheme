@@ -57,6 +57,94 @@ add_filter( 'post_thumbnail_html', 'remove_img_attr' );
 
 /*
     ======================================================
+    Filtro para the_content
+    ======================================================
+*/
+
+function filter_content($content) {
+	if( is_singular() && is_main_query() ) {
+		$p_content = ' <div class="container margin"><p class="left-align"> ';
+		$p_close_content = ' </p><br><br></div> ';
+		$heading_five = ' <h5 class="center red-text text-accent-4"> ';
+		$gallery_four = '<div class="col s3 image"> ';
+		$content = str_replace ("<p>" , $p_content, $content);
+		$content = str_replace ("</p>" , $p_close_content, $content);
+		$content = str_replace ("<h5>", $heading_five, $content);
+	}
+	return $content;
+}
+add_filter('the_content', 'filter_content');
+add_filter( 'use_default_gallery_style', '__return_false' );
+
+define( 'DEFAULT_GALLERY_COLS', 3 );
+
+function get_my_gallery_content( $attrs ) {
+  $gallery_body = "";
+
+  if( array_key_exists( 'size', $attrs ) ) {
+    $image_size = $attrs[ 'size' ];
+  } else {
+    $image_size = 'medium';
+  };
+
+  $image_ids = explode(',', $attrs[ 'ids' ] );
+
+  if( array_key_exists( 'columns', $attrs ) ) {
+    $columns = $attrs[ 'columns' ];
+  } else {
+    $columns = DEFAULT_GALLERY_COLS;
+  };
+
+  $show_caption = false;
+
+  switch( $columns ) {
+    case 1:
+      $show_caption = true;
+      break;
+    case 2:
+      $image_class = 'col l6 image';
+      break;
+    case 3:
+      $image_class = 'col l4 image';
+      break;
+		case 4:
+		  $image_class = 'col s3 image';
+		  break;
+  };
+
+  $last_id = sizeof( $image_ids ) -1;
+
+  foreach( $image_ids as $image_id ) {
+    $attachment = wp_get_attachment_image_src( $image_id , $image_size );
+    $attachment_full = wp_get_attachment_image_src( $image_id, 'full' );
+
+    $image_url = $attachment[ 0 ];
+    $image_url_full = $attachment_full[ 0 ];
+
+    $caption = get_post_field( 'post_excerpt', $image_id );
+
+    $gallery_element = "\t\t" . '<div class="' . $image_class . '"><a href="' . $image_url_full . '" class="swipebox" rel="gallery" title="' . $caption . '"><img class="responsive-img" src="' . $image_url . '" /></a></div>';
+
+    $gallery_body = $gallery_body . $gallery_element . "\n";
+  };
+  return  $gallery_body;
+}
+
+function my_gallery_shortcode( $output = '', $atts, $instance ) {
+        $return = $output;
+
+        $my_result = get_my_gallery_content( $atts );
+
+        if( !empty( $my_result ) ) {
+                $return = $my_result;
+        }
+        return $return;
+}
+
+add_filter( 'post_gallery', 'my_gallery_shortcode', 10, 3 );
+
+/*
+    ======================================================
     Habilita extracto para pages
     ======================================================
 */
