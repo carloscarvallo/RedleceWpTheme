@@ -20,7 +20,7 @@
 
 		<nav class="white" role="navigation">
       <div class="nav-wrapper container">
-        <a id="logo-container" href="<?php bloginfo('template_url')?>" class="brand-logo"> <img src="<?php bloginfo('template_url')?>/images/logon.jpg" alt="Logo"> </a>
+        <a id="logo-container" href="<?php echo bloginfo('url'); ?>" class="brand-logo"> <img src="<?php bloginfo('template_url')?>/images/logon.jpg" alt="Logo"> </a>
 
           <?php
             wp_nav_menu(array(
