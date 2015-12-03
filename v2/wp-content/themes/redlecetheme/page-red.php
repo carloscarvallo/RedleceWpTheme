@@ -16,7 +16,7 @@ get_header(); ?>
       <div class="container">
       <div class="row">
         <div class="col s12 center">
-          <h4>La Red Latinoamericana de educación en contextos de encierro - RedLECE - se creó en el marco del proyecto EUROsociAL-Educación en el transcurso del III Foro educativo Mercosur en Belo Horizonte (Brasil) del 20 al 24 de noviembre de 2006.</h4>
+          <h4><?php the_field( 'heading' ); ?></h4>
         </div>
       </div>
       </div>
