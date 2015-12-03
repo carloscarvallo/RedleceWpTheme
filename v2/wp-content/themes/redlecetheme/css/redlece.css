@@ -129,6 +129,10 @@ nav ul a {
   padding: 0 7.5px;
 }
 
+li > a {
+  text-transform: uppercase;
+}
+
 .header-title {
   font-weight: bold;
 }
