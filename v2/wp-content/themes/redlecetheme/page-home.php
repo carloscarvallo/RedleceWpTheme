@@ -86,7 +86,8 @@ endif;
       <?php
 
       $args = array(
-        'type' => 'post'
+        'type' => 'post',
+        'posts_per_page' => 6
       );
 
       $otherPost = new WP_Query( $args );
