@@ -177,7 +177,9 @@ nav ul li:hover, nav ul li.active {
   background-color: rgba(0, 0, 0, 0) }
 
 .col.s3 img.responsive-img,
-.col.s4 img.responsive-img {
+.col.s4 img.responsive-img,
+.col.s3 a img.responsive-img,
+.col.s4 a img.responsive-img {
   object-fit: cover;
   /*object-position: center;*/
   height: 100%;
