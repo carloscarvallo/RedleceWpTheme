@@ -1,117 +1,115 @@
-<?php get_header(); ?>
+<?php
 
-  <div class="row">
+/*
+  Template Name: Pagina con Titulo
+*/
 
-    <div class="col s6">
+get_header(); ?>
 
-      <?php
-        //loop para los ultimos post de cada categoria
-        /*$args_cat = array(
-          'include' => '1, 5, 6'
-        );
+	<?php
 
-        $categories = get_categories($args_cat);
-        //var_dump($categories);
-        foreach($categories as $category):
+	if( have_posts() ):
 
-        endforeach;*/
+		while( have_posts() ): the_post(); ?>
 
-        //MOSTRARA SOLO UNA CATEGORIA
-        $args = array(
-          'type' => 'post',
-          'posts_per_page' => 3,
-          'category__in' => array( 1 ),
-        );
-
-        $lastBlog = new WP_Query( $args );
-
-        if( $lastBlog->have_posts() ):
-
-		      while( $lastBlog->have_posts() ): $lastBlog->the_post();?>
-
-            <?php get_template_part('content','featured'); ?>
-
-            <?php// get_template_part('content',get_post_format()); ?>
-
-		      <?php endwhile;
-
-	      endif;
-
-        wp_reset_postdata();
-
-      ?>
-
+    <div class="section anaranjadito">
+      <div class="container">
+      <div class="row">
+        <div class="col s12 center">
+          <h4><?php the_field( 'heading' ); ?></h4>
+        </div>
+      </div>
+      </div>
     </div>
 
-    <div class="col s6">
+    <div id="index-banner" class="parallax-container">
+      <div class="section no-pad-bot">
+        <div class="container">
+          <br><br>
+          <br><br>
+        </div>
+      </div>
+      <div class="parallax">
+        <?php the_post_thumbnail('full'); ?>
+      </div>
+    </div>
 
-	    <?php
+  <?php endwhile;
 
-	      if( have_posts() ):
+endif;
 
-		      while( have_posts() ): the_post();?>
+?>
 
-            <?php get_template_part('content',get_post_format()); ?>
+<div class="section cremita">
+	<div class="container margin">
+		<div class="row">
 
-		      <?php endwhile;
+			<?php
 
-	      endif;
-/*
-        //PRINT OTHER 2 POSTS NO EL PRIMERO
-        $args = array(
-          'type' => 'post',
-          'posts_per_page' => 2,
-          'offset' => 1,
-        );
-        $lastBlog = new WP_Query($args);
+			$args = array(
+				'post_type' => 'page',
+				'posts_per_page' => 2,
+				'post__in' => array(10,14)
+			);
 
-        if( $lastBlog->have_posts() ):
+			$lastBlog = new WP_Query( $args );
 
-		      while( $lastBlog->have_posts() ): $lastBlog->the_post();?>
+			if( $lastBlog->have_posts() ):
 
-            <?php get_template_part('content',get_post_format()); ?>
+				while( $lastBlog->have_posts() ): $lastBlog->the_post();?>
 
-		      <?php endwhile;
+					  <?php get_template_part('content','extracto'); ?>
 
-	      endif;
+				<?php endwhile;
 
-        wp_reset_postdata();
-*/
-	    ?>
+			endif;
 
-      <hr>
+			wp_reset_postdata();
 
+			?>
+
+		</div>
+	</div>
+</div>
+
+			<div class="section white">
+				<div class="container margin">
+					<div class="row">
+
+
+
+
+	  <div class="col s12">
+
+		  <h4 class="red-text text-accent-4 center">ULTIMAS NOTICIAS</h4>
+		  <br><br>
       <?php
-/*
-      //IMPRIMIR SOLO ROCKABILLY
 
-      $lastBlog = new WP_Query('type=post&posts_per_page=-1&cat=6');
+      $args = array(
+        'type' => 'post'
+      );
 
-      if( $lastBlog->have_posts() ):
+      $otherPost = new WP_Query( $args );
 
-        while( $lastBlog->have_posts() ): $lastBlog->the_post();?>
+      if( $otherPost->have_posts() ):
 
-          <?php get_template_part('content',get_post_format()); ?>
+        while( $otherPost->have_posts() ): $otherPost->the_post();?>
 
-        <?php endwhile;
+        <?php get_template_part('content','noticias'); ?>
 
-      endif;
+      <?php endwhile;
 
-      wp_reset_postdata();
-*/
+    endif;
+
     ?>
+	</div>
 
-    </div>
+</div>
 
-  </div>
+</div>
+
+</div>
+
+
 
 <?php get_footer(); ?>
-
-
-<!-- if( is_front_page() ){
-  //custom queries
-} else {
-
-} -->
-
-<!-- <a href="<?php// echo get_permalink(); ?>">your omg URL</a> -->
