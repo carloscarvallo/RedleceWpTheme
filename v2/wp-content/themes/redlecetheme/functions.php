@@ -197,6 +197,7 @@ add_action('widgets_init','redlece_widget_setup');
 
 
 add_action( 'init', 'pais_init' );
+add_action( 'init', 'documento_init' );
 
 function pais_init() {
         $labels = array(
@@ -234,7 +235,45 @@ function pais_init() {
         );
 
         register_post_type( 'pais', $args );
-};
+}
+
+function documento_init() {
+        $labels = array(
+                'name'               => _x( 'Documentos', 'post type general name', 'your-plugin-textdomain' ),
+                'singular_name'      => _x( 'Documento', 'post type singular name', 'your-plugin-textdomain' ),
+                'menu_name'          => _x( 'Documento', 'admin menu', 'your-plugin-textdomain' ),
+                'name_admin_bar'     => _x( 'Documento', 'add new on admin bar', 'your-plugin-textdomain' ),
+                'add_new'            => _x( 'Agregar nuevo', 'Documento', 'your-plugin-textdomain' ),
+                'add_new_item'       => __( 'Agregar nuevo Documento', 'your-plugin-textdomain' ),
+                'new_item'           => __( 'Nuevo Documento', 'your-plugin-textdomain' ),
+                'edit_item'          => __( 'Editar Documento', 'your-plugin-textdomain' ),
+                'view_item'          => __( 'Ver Documento', 'your-plugin-textdomain' ),
+                'all_items'          => __( 'Todos los documentos', 'your-plugin-textdomain' ),
+                'search_items'       => __( 'Buscar documentos', 'your-plugin-textdomain' ),
+                'parent_item_colon'  => __( 'Documentos padres:', 'your-plugin-textdomain' ),
+                'not_found'          => __( 'Documentos no encontrados.', 'your-plugin-textdomain' ),
+                'not_found_in_trash' => __( 'Documentos no encontrados en la papelera.', 'your-plugin-textdomain' )
+        );
+
+        $args = array(
+                'labels'             => $labels,
+                'description'        => __( 'Description.', 'your-plugin-textdomain' ),
+                'public'             => true,
+                'publicly_queryable' => true,
+                'show_ui'            => true,
+                'show_in_menu'       => true,
+                'query_var'          => true,
+                'rewrite'            => array( 'slug' => 'documento' ),
+                'capability_type'    => 'post',
+                'has_archive'        => true,
+                'hierarchical'       => false,
+                'menu_position'      => null,
+                'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments', 'post-formats' ),
+								'taxonomies' => array( 'category' )
+        );
+
+        register_post_type( 'documento', $args );
+}
 
 /*
     ======================================================
