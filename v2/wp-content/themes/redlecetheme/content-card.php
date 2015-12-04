@@ -12,7 +12,7 @@
         the_post_thumbnail('full'); ?>
     <?php endif; ?>
 
-    <span class="card-title"><?php the_field( 'institucion' ); ?></span>
+    <span class="card-title"><?php the_field( 'institucion' ); ?></span></a>
   </div>
   <div class="card-action white-text">
     <p><?php the_field( 'sitio_web' ); ?><br>
