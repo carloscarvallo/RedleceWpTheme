@@ -177,11 +177,11 @@ function redlece_widget_setup() {
 	  array(
       'name' => 'Sidebar',
 			'id' => 'sidebar-1',
-			'class' => 'custom',
+			'class' => '',
 			'description' => 'Standard Sidebar',
-			'before_widget' => '<li id="%1$s" class="widget %2$s">',
-	    'after_widget'  => '</li>',
-	    'before_title'  => '<h4 class="widgettitle">',
+			'before_widget' => '<table id="%1$s" class="bordered highlight %2$s">',
+	    'after_widget'  => '</table>',
+	    'before_title'  => '<h4 class="widgettitle" style="display: none;">',
 	    'after_title'   => '</h4>',
 		)
 	);
