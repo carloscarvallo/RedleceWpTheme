@@ -229,9 +229,10 @@ function pais_init() {
                 'capability_type'    => 'post',
                 'has_archive'        => true,
                 'hierarchical'       => false,
-                'menu_position'      => null,
+                'menu_position'      => 5,
                 'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments', 'post-formats' ),
-		'taxonomies' => array( 'category' )
+								'taxonomies' 				 => array( 'category' ),
+								'exclude_from_search'=> false
         );
 
         register_post_type( 'pais', $args );
@@ -267,9 +268,10 @@ function documento_init() {
                 'capability_type'    => 'post',
                 'has_archive'        => true,
                 'hierarchical'       => false,
-                'menu_position'      => null,
+                'menu_position'      => 6,
                 'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments', 'post-formats' ),
-								'taxonomies' => array( 'category' )
+								'taxonomies' => array( 'category' ),
+								'exclude_from_search'=> false
         );
 
         register_post_type( 'documento', $args );
