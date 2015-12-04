@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+<h1>soy un documento</h1>
 	<?php
 
 	if( have_posts() ):
@@ -12,7 +12,7 @@
 
         <?php if( has_post_thumbnail() ): ?>
 
-          <div class="pull-right"><?php the_post_thumbnail('thumbnail'); ?></div>
+          <div class="pull-right"><?php the_post_thumbnail('full'); ?></div>
 
         <?php endif; ?>
 
