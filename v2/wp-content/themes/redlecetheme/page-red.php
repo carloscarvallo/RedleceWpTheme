@@ -29,10 +29,6 @@ get_header(); ?>
 
   ?>
 
-<!-- =========================================================================== -->
-<!-- HARDCODING -->
-<!-- =========================================================================== -->
-
 <div class="section">
 
   <div class="row">
@@ -41,7 +37,8 @@ get_header(); ?>
 			<?php
 			$args = array(
 				'post_type' => 'pais',
-				'category__in' => array( 7 )
+				'category__in' => array( 7 ),
+				'order' => 'ASC'
 			);
 			$my_query = new WP_Query($args);
 
@@ -55,7 +52,7 @@ get_header(); ?>
 						</td></tr>
 					</tbody>
 				</table>
-				
+
 				<?php endwhile;
 				wp_reset_postdata();
 				?>
@@ -63,7 +60,7 @@ get_header(); ?>
 
   <div class="col s7 offset-s1">
     <?php
-  	//MOSTRARA SOLO UNA CATEGORIA
+
   	$args = array(
   		'post_type' => 'pais',
   		'category__in' => array( 7 )
