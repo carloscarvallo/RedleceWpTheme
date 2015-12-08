@@ -29,39 +29,33 @@ get_header(); ?>
 
   ?>
 
-<!-- =========================================================================== -->
-<!-- HARDCODING -->
-<!-- =========================================================================== -->
-
 <div class="section">
 
   <div class="row">
-    <div class="col s2 offset-s1">
-		<br>
-    <table class="bordered highlight">
-    <tbody>
-      <tr><td>Argentina</td></tr>
-      <tr><td>Brasil</td></tr>
-      <tr><td>Chile</td></tr>
-      <tr><td>Colombia</td></tr>
-      <tr><td>Costa Rica</td></tr>
-      <tr><td>Cuba</td></tr>
-      <tr><td>Ecuador</td></tr>
-      <tr><td>El Salvador</td></tr>
-      <tr><td>España</td></tr>
-      <tr><td>Guatemala</td></tr>
-      <tr><td>Honduras</td></tr>
-      <tr><td>México</td></tr>
-      <tr><td>Nicaragua</td></tr>
-      <tr><td>Panamá</td></tr>
-      <tr><td>Paraguay</td></tr>
-      <tr><td>Perú</td></tr>
-      <tr><td>Portugal</td></tr>
-      <tr><td>República Dominicana</td></tr>
-      <tr><td>Uruguay</td></tr>
-    </tbody>
-  </table>
-  </div>
+		<div class="col s2 offset-s1">
+			<br>
+			<?php
+			$args = array(
+				'post_type' => 'documento',
+				'category__in' => array( 8 )
+			);
+			$my_query = new WP_Query($args);
+
+		  while ($my_query->have_posts()) : $my_query->the_post(); ?>
+
+				<table class="bordered highlight">
+					<tbody>
+						<tr><td>
+							<a href="<?php the_permalink() ?>">
+								<?php the_title(); ?></a>
+						</td></tr>
+					</tbody>
+				</table>
+
+				<?php endwhile;
+				wp_reset_postdata();
+				?>
+		</div>
 
   <div class="col s7 offset-s1">
     <?php
