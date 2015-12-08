@@ -161,7 +161,7 @@ add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
 */
 
 function  wpc_custom_excerpt ( $excerpt )  {
-  $excerpt  =  str_replace ("<p",  "<p class = \"center-align red-text text-accent-4 \"",  $excerpt);
+  $excerpt  =  str_replace ("<p",  "<p class = \"center-align red-text text-accent-4 excerpt \"",  $excerpt);
   return  $excerpt ;
 }
 add_filter( 'the_excerpt' , 'wpc_custom_excerpt' ) ;
