@@ -231,3 +231,19 @@ td {
 a {
   color: #D50000 !important;
 }
+
+.excerpt {
+  width: 350px;
+  margin: 0 auto;
+  font-size: 1.6rem !important;
+}
+
+.uppercase-text {
+  text-transform: uppercase;
+}
+
+.card-image img {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+}
