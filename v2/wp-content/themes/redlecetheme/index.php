@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-
 <div class="section white">
 	<div class="container margin">
 		<div class="row">

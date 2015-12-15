@@ -1,4 +1,3 @@
-<!-- <h4 class="red-text text-accent-4 left-align">ARGENTINA</h4> -->
 <br><br>
 <hr>
 <?php the_title(sprintf('<h4 class="red-text text-accent-4 left-align"><a href="%s">', esc_url( get_permalink() ) ), '</a></h5>'); ?>
