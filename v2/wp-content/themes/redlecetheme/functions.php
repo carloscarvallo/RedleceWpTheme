@@ -62,6 +62,10 @@ add_filter( 'post_thumbnail_html', 'remove_img_attr' );
 */
 
 function filter_content($content) {
+	if ( is_singular() ){
+    $custom_heading = ' <h4 class="red-text text-accent-4 subtitulo"> ';
+    $content = str_replace ("<h4>" , $custom_heading, $content);
+	}
 	if( is_singular() && is_main_query() && ! is_singular( 'pais' ) && ! is_singular( 'documento' ) ) {
 		$p_content = ' <div class="container margin"><p class="left-align"> ';
 		$p_close_content = ' </p><br><br></div> ';

@@ -259,3 +259,15 @@ a {
   width: 100%;
   margin: 0 auto;
 }
+
+.subtitulo {
+  font-size: 2rem;
+  width: 85%;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 993px){
+  .subtitulo {
+    width: 70%;
+  }
+}
