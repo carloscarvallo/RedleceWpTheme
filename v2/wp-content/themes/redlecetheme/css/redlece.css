@@ -232,6 +232,10 @@ a {
   color: #D50000 !important;
 }
 
+.row .col.s2 {
+  margin-left: 8.33333%;
+}
+
 .excerpt {
   width: 350px;
   margin: 0 auto;
@@ -268,4 +272,5 @@ a {
 
 #wpadminbar a {
   color: #eee !important;
+>>>>>>> e71cb3cc249f408683fa8def544bfcafe74b6624
 }
