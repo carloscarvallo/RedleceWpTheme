@@ -1,9 +1,5 @@
 <?php
 
-/*
-  Template Name: Pagina con Titulo
-*/
-
 get_header(); ?>
 
 	<?php
