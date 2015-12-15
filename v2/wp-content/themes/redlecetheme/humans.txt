@@ -2,7 +2,7 @@
 
 /* TEAM */
         Creator: Carlos Cesar Carvallo Montiel
-        Contact: erotomania669 [at] gmail.com
+        Contact: carloscarvallo87 [at] gmail.com
         Twitter: @carloseroto
         From: Asuncion, Paraguay
 
@@ -12,4 +12,3 @@
         Standars: HTML5, CSS3, JavaScript
         Components: jQuery, PHP
         Software: Atom
-
