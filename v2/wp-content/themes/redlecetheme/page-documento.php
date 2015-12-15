@@ -71,7 +71,7 @@ get_header(); ?>
 
   		while( $lastBlog->have_posts() ): $lastBlog->the_post();?>
 
-  			  <?php get_template_part('content','card'); ?>
+  			  <?php get_template_part('content','doc'); ?>
 
   		<?php endwhile;
 
