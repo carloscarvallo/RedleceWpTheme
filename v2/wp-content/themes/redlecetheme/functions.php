@@ -73,6 +73,7 @@ function filter_content($content) {
 		$p_align = ' <p class="left-align"> ';
 		$heading_five = ' <h5 class="red-text text-accent-4"> ';
 		$content = str_replace ('<p style="text-align: left;">' , $p_align, $content);
+		$content = str_replace ("<p>" , $p_align, $content);
 		$content = str_replace ("<h5>", $heading_five, $content);
 	}
 	return $content;
