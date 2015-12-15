@@ -57,7 +57,7 @@ get_header(); ?>
 				?>
 		</div>
 
-  <div class="col s12 l7 offset-l1">
+  <div class="col s12 l7">
     <?php
   	//MOSTRARA SOLO UNA CATEGORIA
   	$args = array(

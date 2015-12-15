@@ -63,7 +63,7 @@
 				?>
 		</div>
 
-    <div class="col s12 l7 offset-l1">
+    <div class="col s12 l7">
     <?php
 
   	if( have_posts() ):
@@ -79,7 +79,7 @@
   	?>
     </div>
 
-	  <div class="col s12 l7 offset-l4">
+	  <div class="col s12 l7 offset-l3">
 
 		<?php
 
