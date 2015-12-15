@@ -141,7 +141,7 @@ function get_my_gallery_content( $attrs ) {
 
     $caption = get_post_field( 'post_excerpt', $image_id );
 
-    $gallery_element = "\t\t" . '<div class="' . $image_class . '"><a href="' . $image_url_full . '"data-fancybox-group="gallery" class="fancybox" rel="gallery" title="' . $caption . '"><img class="responsive-img" src="' . $image_url . '" /></a></div>';
+    $gallery_element = "\t\t" . '<div class="' . $image_class . '"><a href="' . $image_url_full . '"class="fancybox" data-fancybox-group="gallery" rel="gallery" title="' . $caption . '"><img class="responsive-img" src="' . $image_url . '" /></a></div>';
 
     $gallery_body = $gallery_body . $gallery_element . "\n";
   };
