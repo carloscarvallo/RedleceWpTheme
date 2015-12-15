@@ -33,7 +33,7 @@
 				}
 			});
 			ed.addButton('heading5', {
-				title : 'wpheadingbuttons.heading5',
+				title : 'Heading en rojo',
 				image : url+'/../images/btn_h5.png',
 				onclick : function() {
 					ed.execCommand('FormatBlock', false, 'h5');
