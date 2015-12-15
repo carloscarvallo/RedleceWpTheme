@@ -63,42 +63,36 @@
 				?>
 		</div>
 
-  <div class="col s7 offset-s1">
+    <div class="col s7 offset-s1">
     <?php
 
   	if( have_posts() ):
 
   		while( have_posts() ): the_post(); ?>
 
-  			  <?php get_template_part('content','card'); ?>
+  			  <?php get_template_part('content','doc'); ?>
 
   		<?php endwhile;
 
   	endif;
 
   	?>
+    </div>
+
+	  <div class="col s7 offset-s4">
+
+		<?php
+
+		if( have_posts() ):
+			while( have_posts() ): the_post(); ?>
+			<?php the_content(); ?>
+		  <?php endwhile;
+	  endif;
+	  ?>
+
+    </div>
   </div>
-
-
-<?php
-
-if( have_posts() ):
-
-  while( have_posts() ): the_post(); ?>
-
-          <div class="col s7 offset-s4">
-
-            <?php the_content(); ?>
-
-          </div>
-        </div>
-      </div>
-
-  <?php endwhile;
-
-endif;
-
-?>
+</div>
 
 
 <div class="section cremita">
