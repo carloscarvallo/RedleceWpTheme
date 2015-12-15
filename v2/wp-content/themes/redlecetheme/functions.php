@@ -62,13 +62,17 @@ add_filter( 'post_thumbnail_html', 'remove_img_attr' );
 */
 
 function filter_content($content) {
-	if( is_singular() && is_main_query() ) {
+	if( is_singular() && is_main_query() && ! is_singular( 'pais' ) ) {
 		$p_content = ' <div class="container margin"><p class="left-align"> ';
 		$p_close_content = ' </p><br><br></div> ';
 		$heading_five = ' <h5 class="center red-text text-accent-4"> ';
-		$gallery_four = '<div class="col s3 image"> ';
 		$content = str_replace ("<p>" , $p_content, $content);
 		$content = str_replace ("</p>" , $p_close_content, $content);
+		$content = str_replace ("<h5>", $heading_five, $content);
+	} else if ( is_singular( 'pais' ) ) {
+		$p_align = ' <p class="left-align"> ';
+		$heading_five = ' <h5 class="red-text text-accent-4"> ';
+		$content = str_replace ('<p style="text-align: left;">' , $p_align, $content);
 		$content = str_replace ("<h5>", $heading_five, $content);
 	}
 	return $content;
@@ -102,10 +106,10 @@ function get_my_gallery_content( $attrs ) {
       $show_caption = true;
       break;
     case 2:
-      $image_class = 'col l6 image';
+      $image_class = 'col s6 image';
       break;
     case 3:
-      $image_class = 'col l4 image';
+      $image_class = 'col s4 image';
       break;
 		case 4:
 		  $image_class = 'col s3 image';
