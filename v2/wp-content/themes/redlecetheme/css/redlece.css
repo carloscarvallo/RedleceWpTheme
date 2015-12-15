@@ -247,3 +247,15 @@ a {
   object-position: center;
   height: 100%;
 }
+
+.noticias-header {
+  height: 50px;
+}
+
+.date {
+  font-size: 1rem;
+  font-weight: normal;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
