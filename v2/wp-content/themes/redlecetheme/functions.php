@@ -62,19 +62,19 @@ add_filter( 'post_thumbnail_html', 'remove_img_attr' );
 */
 
 function filter_content($content) {
-	if( is_singular() && is_main_query() && ! is_singular( 'pais' ) ) {
+	if( is_singular() && is_main_query() && ! is_singular( 'pais' ) && ! is_singular( 'documento' ) ) {
 		$p_content = ' <div class="container margin"><p class="left-align"> ';
 		$p_close_content = ' </p><br><br></div> ';
 		$heading_five = ' <h5 class="center red-text text-accent-4"> ';
 		$content = str_replace ("<p>" , $p_content, $content);
 		$content = str_replace ("</p>" , $p_close_content, $content);
 		$content = str_replace ("<h5>", $heading_five, $content);
-	} else if ( is_singular( 'pais' ) ) {
-		$p_align = ' <p class="left-align"> ';
-		$heading_five = ' <h5 class="red-text text-accent-4"> ';
-		$content = str_replace ('<p style="text-align: left;">' , $p_align, $content);
-		$content = str_replace ("<p>" , $p_align, $content);
-		$content = str_replace ("<h5>", $heading_five, $content);
+	} else if ( is_singular( 'pais' ) || is_singular( 'documento' ) ) {
+		  $p_align = ' <p class="left-align"> ';
+		  $heading_five = ' <h5 class="red-text text-accent-4"> ';
+		  $content = str_replace ('<p style="text-align: left;">' , $p_align, $content);
+		  $content = str_replace ("<p>" , $p_align, $content);
+		  $content = str_replace ("<h5>", $heading_five, $content);
 	}
 	return $content;
 }
