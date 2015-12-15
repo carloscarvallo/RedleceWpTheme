@@ -11,7 +11,15 @@ function redlece_script_enqueue() {
 	wp_enqueue_style('redlece-materialize', get_template_directory_uri() . '/bower_components/Materialize/dist/css/materialize.css', array(), '1.0.0', '');
 	wp_enqueue_style('redlece-style', get_template_directory_uri() . '/css/redlece.css', array(), '1.0.0', '');
 	wp_enqueue_style('redlece-responsive', get_template_directory_uri() . '/css/responsive.css', array(), '1.0.0', '');
+	wp_enqueue_style('redlece-fancybox', get_template_directory_uri() . '/css/fancybox/jquery.fancybox.css', array(), '2.1.5', '');
+	wp_enqueue_style('redlece-fancybox-buttons', get_template_directory_uri() . '/css/fancybox/helpers/jquery.fancybox-buttons.css', array(), '1.0.5', '');
+	wp_enqueue_style('redlece-fancybox-thumbs', get_template_directory_uri() . '/css/fancybox/helpers/jquery.fancybox-thumbs.css', array(), '1.0.7', '');
   wp_enqueue_script('redlece-jquery', 'https://code.jquery.com/jquery-2.1.1.min.js', array(), '2.1.1', true);
+  wp_enqueue_script('redlece-fancybox-js', get_template_directory_uri() . '/js/fancybox/jquery.fancybox.pack.js', array(), '2.1.5', true);
+	wp_enqueue_script('redlece-mousewheel', get_template_directory_uri() . '/js/fancybox/jquery.mousewheel.pack.js', array(), '3.1.3', true);
+	wp_enqueue_script('redlece-fancybox-buttons', get_template_directory_uri() . '/js/fancybox/helpers/jquery.fancybox-buttons.js', array(), '1.0.5', true);
+	wp_enqueue_script('redlece-fancybox-media', get_template_directory_uri() . '/js/fancybox/helpers/jquery.fancybox-media.js', array(), '1.0.6', true);
+	wp_enqueue_script('redlece-fancybox-thumbs', get_template_directory_uri() . '/js/fancybox/helpers/jquery.fancybox-thumbs.js', array(), '1.0.7', true);
 	wp_enqueue_script('redlece-materializejs', get_template_directory_uri() . '/bower_components/Materialize/dist/js/materialize.js', array(), '1.0.0', true);
 	wp_enqueue_script('redlece-customjs', get_template_directory_uri() . '/js/redlece.js', array(), '1.0.0', true);
 }
@@ -133,7 +141,7 @@ function get_my_gallery_content( $attrs ) {
 
     $caption = get_post_field( 'post_excerpt', $image_id );
 
-    $gallery_element = "\t\t" . '<div class="' . $image_class . '"><a href="' . $image_url_full . '" class="swipebox" rel="gallery" title="' . $caption . '"><img class="responsive-img" src="' . $image_url . '" /></a></div>';
+    $gallery_element = "\t\t" . '<div class="' . $image_class . '"><a href="' . $image_url_full . '"data-fancybox-group="gallery" class="fancybox" rel="gallery" title="' . $caption . '"><img class="responsive-img" src="' . $image_url . '" /></a></div>';
 
     $gallery_body = $gallery_body . $gallery_element . "\n";
   };
