@@ -9,7 +9,7 @@
       <a href="<?php the_permalink(); ?>">
         <?php
         the_post_thumbnail('full'); ?>
-    <?php endif; ?>
+    <?php endif; ?></a>
 
     <span class="card-title"><?php the_field( 'institucion' ); ?></span></a>
   </div>

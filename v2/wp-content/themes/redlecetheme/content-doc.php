@@ -9,7 +9,7 @@
       <a href="<?php the_permalink(); ?>">
         <?php
         the_post_thumbnail('full'); ?>
-    <?php endif; ?>
+    <?php endif; ?></a>
 
   </div>
   <div class="card-action white-text">
