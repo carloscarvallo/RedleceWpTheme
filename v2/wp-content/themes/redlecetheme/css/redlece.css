@@ -266,6 +266,10 @@ a {
   margin: 0 auto;
 }
 
+#wpadminbar a {
+  color: #eee !important;
+}
+
 @media only screen and (min-width: 993px){
   .subtitulo {
     width: 70%;
