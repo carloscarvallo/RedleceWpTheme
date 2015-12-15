@@ -157,7 +157,7 @@ p.center-align, p.left-align {
 
 .container.margin {
   margin: 30px auto;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .footer-img {
@@ -180,10 +180,10 @@ p.footer {
 nav ul li:hover, nav ul li.active {
   background-color: rgba(0, 0, 0, 0) }
 
-.col.s3 img.responsive-img,
-.col.s4 img.responsive-img,
-.col.s3 a img.responsive-img,
-.col.s4 a img.responsive-img {
+.col.m3 img.responsive-img,
+.col.m4 img.responsive-img,
+.col.m3 a img.responsive-img,
+.col.m4 a img.responsive-img {
   object-fit: cover;
   /*object-position: center;*/
   height: 100%;
@@ -193,7 +193,7 @@ nav ul li:hover, nav ul li.active {
   width: 100%;
 }
 
-.col.s3.image, .col.s4.image {
+.col.m3.image, .col.m4.image {
   height: 250px;
 }
 .image-container {
@@ -268,10 +268,4 @@ a {
 
 #wpadminbar a {
   color: #eee !important;
-}
-
-@media only screen and (min-width: 993px){
-  .subtitulo {
-    width: 70%;
-  }
 }

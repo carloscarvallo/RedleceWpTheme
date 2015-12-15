@@ -35,7 +35,7 @@
 <div class="section">
 
   <div class="row">
-    <div class="col s2 offset-s1">
+    <div class="col s2 offset-s1 hide-on-med-and-down">
 			<br>
 			<?php
 			$args = array(
@@ -62,7 +62,7 @@
 				?>
 		</div>
 
-  <div class="col s7 offset-s1">
+  <div class="col s12 l7 offset-l1">
     <?php
 
   	if( have_posts() ):
@@ -78,27 +78,21 @@
   	?>
   </div>
 
-
+    <div class="col s12 l7 offset-l4">
 <?php
 
 if( have_posts() ):
 
   while( have_posts() ): the_post(); ?>
-
-          <div class="col s7 offset-s4">
-
             <?php the_content(); ?>
-
-          </div>
-        </div>
-      </div>
-
   <?php endwhile;
 
 endif;
 
 ?>
-
+    </div>
+  </div>
+</div>
 
 <div class="section cremita">
 	<div class="container margin">

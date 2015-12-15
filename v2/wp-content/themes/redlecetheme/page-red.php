@@ -32,7 +32,7 @@ get_header(); ?>
 <div class="section">
 
   <div class="row">
-		<div class="col s2 offset-s1">
+		<div class="col s2 offset-s1 hide-on-med-and-down">
 			<br>
 			<?php
 			$args = array(
@@ -58,7 +58,7 @@ get_header(); ?>
 				?>
 		</div>
 
-  <div class="col s7 offset-s1">
+  <div class="col s12 l7 offset-l1">
     <?php
 
   	$args = array(

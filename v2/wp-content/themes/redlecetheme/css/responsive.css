@@ -1,0 +1,27 @@
+@media only screen and (min-width: 993px){
+  .subtitulo {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .side-nav a {
+    font-size: 1rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+  .titular, .image-container {
+    height: inherit;
+  }
+  .dotted.center span {
+    font-size: 15px;
+  }
+  .container.margin {
+    margin-top: 0;
+  }
+  footer.page-footer {
+    padding-top: 10px;
+    padding-bottom: 0;
+  }
+}

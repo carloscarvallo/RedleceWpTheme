@@ -35,7 +35,7 @@
 <div class="section">
 
   <div class="row">
-    <div class="col s2 offset-s1">
+    <div class="col s2 offset-s1 hide-on-med-and-down">
 			<br>
 			<!-- 8 id de categoria documento -->
 			<?php
@@ -63,7 +63,7 @@
 				?>
 		</div>
 
-    <div class="col s7 offset-s1">
+    <div class="col s12 l7 offset-l1">
     <?php
 
   	if( have_posts() ):
@@ -79,7 +79,7 @@
   	?>
     </div>
 
-	  <div class="col s7 offset-s4">
+	  <div class="col s12 l7 offset-l4">
 
 		<?php
 

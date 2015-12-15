@@ -10,6 +10,7 @@ function redlece_script_enqueue() {
 	wp_enqueue_style('redlece-material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons', array(), '', '' );
 	wp_enqueue_style('redlece-materialize', get_template_directory_uri() . '/bower_components/Materialize/dist/css/materialize.css', array(), '1.0.0', '');
 	wp_enqueue_style('redlece-style', get_template_directory_uri() . '/css/redlece.css', array(), '1.0.0', '');
+	wp_enqueue_style('redlece-responsive', get_template_directory_uri() . '/css/responsive.css', array(), '1.0.0', '');
   wp_enqueue_script('redlece-jquery', 'https://code.jquery.com/jquery-2.1.1.min.js', array(), '2.1.1', true);
 	wp_enqueue_script('redlece-materializejs', get_template_directory_uri() . '/bower_components/Materialize/dist/js/materialize.js', array(), '1.0.0', true);
 	wp_enqueue_script('redlece-customjs', get_template_directory_uri() . '/js/redlece.js', array(), '1.0.0', true);
@@ -111,13 +112,13 @@ function get_my_gallery_content( $attrs ) {
       $show_caption = true;
       break;
     case 2:
-      $image_class = 'col s6 image';
+      $image_class = 'col s12 m6 image';
       break;
     case 3:
-      $image_class = 'col s4 image';
+      $image_class = 'col s12 m4 image';
       break;
 		case 4:
-		  $image_class = 'col s3 image';
+		  $image_class = 'col s12 m3 image';
 		  break;
   };
 
