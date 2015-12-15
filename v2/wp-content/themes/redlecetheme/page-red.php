@@ -72,7 +72,7 @@ get_header(); ?>
   	//MOSTRARA SOLO UNA CATEGORIA
   	$args = array(
   		'post_type' => 'pais',
-  		'category__in' => array( 7 ),
+  		'category__in' => array( 5 )
   	);
 
   	$lastBlog = new WP_Query( $args );
@@ -107,7 +107,7 @@ get_header(); ?>
 			$args = array(
 				'post_type' => 'page',
 				'posts_per_page' => 2,
-				'post__in' => array(10,14)
+				'post__in' => array(13,20)
 			);
 
 			$lastBlog = new WP_Query( $args );
