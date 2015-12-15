@@ -58,8 +58,7 @@ get_header(); ?>
 
 	$args = array(
 		'type' => 'post',
-		'posts_per_page' => 2,
-		'category__in' => array( 1 ),
+		'posts_per_page' => 2
 	);
 
 	$lastBlog = new WP_Query( $args );

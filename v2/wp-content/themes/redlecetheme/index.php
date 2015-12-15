@@ -20,8 +20,6 @@
 
 							<?php get_template_part('content','featured'); ?>
 
-							<?php// get_template_part('content',get_post_format()); ?>
-
 						<?php endwhile;
 
 					endif;
