@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-
 <div class="section white">
 	<div class="container margin">
 		<div class="row">
@@ -19,8 +18,6 @@
 						while( $lastBlog->have_posts() ): $lastBlog->the_post();?>
 
 							<?php get_template_part('content','featured'); ?>
-
-							<?php// get_template_part('content',get_post_format()); ?>
 
 						<?php endwhile;
 

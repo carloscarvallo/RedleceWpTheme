@@ -1,7 +1,7 @@
 <?php
 
 /*
-  Template Name: Pagina Red
+  Template Name: Pagina Documento
 */
 
 get_header(); ?>
@@ -36,9 +36,8 @@ get_header(); ?>
 			<br>
 			<?php
 			$args = array(
-				'post_type' => 'pais',
-				'category__in' => array( 7 ),
-				'order' => 'ASC'
+				'post_type' => 'documento',
+				'category__in' => array( 8 )
 			);
 			$my_query = new WP_Query($args);
 
@@ -60,10 +59,10 @@ get_header(); ?>
 
   <div class="col s12 l7">
     <?php
-
+  	//MOSTRARA SOLO UNA CATEGORIA
   	$args = array(
-  		'post_type' => 'pais',
-  		'category__in' => array( 7 )
+  		'post_type' => 'documento',
+  		'category__in' => array( 8 )
   	);
 
   	$lastBlog = new WP_Query( $args );
@@ -72,7 +71,7 @@ get_header(); ?>
 
   		while( $lastBlog->have_posts() ): $lastBlog->the_post();?>
 
-  			  <?php get_template_part('content','card'); ?>
+  			  <?php get_template_part('content','doc'); ?>
 
   		<?php endwhile;
 
@@ -96,7 +95,7 @@ get_header(); ?>
 			$args = array(
 				'post_type' => 'page',
 				'posts_per_page' => 2,
-				'post__in' => array(13,20)
+				'post__in' => array(10,14)
 			);
 
 			$lastBlog = new WP_Query( $args );
@@ -118,5 +117,7 @@ get_header(); ?>
 		</div>
 	</div>
 </div>
+
+<!-- ========================================================================= -->
 
 <?php get_footer(); ?>

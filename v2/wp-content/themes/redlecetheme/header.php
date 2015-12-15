@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Red Latinoamericana de Educación en Contextos de Encierro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<?php wp_head(); ?>
 	</head>
 
@@ -21,7 +22,6 @@
 		<nav class="white" role="navigation">
       <div class="nav-wrapper container">
         <a id="logo-container" href="<?php echo bloginfo('url'); ?>" class="brand-logo"> <img src="<?php bloginfo('template_url')?>/images/logon.jpg" alt="Logo"> </a>
-
           <?php
             wp_nav_menu(array(
               'theme_location' => 'header',
@@ -31,10 +31,15 @@
               )
             );
           ?>
-
-        <ul id="nav-mobile" class="side-nav">
-          <li><a href="#">Navbar Link</a></li>
-        </ul>
+				  <?php
+					  wp_nav_menu(array(
+						  'theme_location' => 'header',
+						  'container' => false,
+						  'menu_class' => 'side-nav',
+						  'menu_id' => 'nav-mobile'
+					    )
+					  );
+				  ?>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
       </div>
     </nav>

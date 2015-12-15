@@ -4,7 +4,7 @@
 
 	tinymce.create('tinymce.plugins.WPHeadingButtons', {
 		init : function(ed, url) {
-			ed.addButton('heading1', {
+			/*ed.addButton('heading1', {
 				title : 'wpheadingbuttons.heading1',
 				image : url+'/../images/btn_h1.png',
 				onclick : function() {
@@ -24,28 +24,28 @@
 				onclick : function() {
 					ed.execCommand('FormatBlock', false, 'h3');
 				}
-			});
+			});*/
 			ed.addButton('heading4', {
-				title : 'wpheadingbuttons.heading4',
+				title : 'SUBTITULO',
 				image : url+'/../images/btn_h4.png',
 				onclick : function() {
 					ed.execCommand('FormatBlock', false, 'h4');
 				}
 			});
 			ed.addButton('heading5', {
-				title : 'wpheadingbuttons.heading5',
+				title : 'Heading en rojo',
 				image : url+'/../images/btn_h5.png',
 				onclick : function() {
 					ed.execCommand('FormatBlock', false, 'h5');
 				}
-			});
+			});/*
 			ed.addButton('heading6', {
 				title : 'wpheadingbuttons.heading6',
 				image : url+'/../images/btn_h6.png',
 				onclick : function() {
 					ed.execCommand('FormatBlock', false, 'h6');
 				}
-			});
+			});*/
 
 		},
 

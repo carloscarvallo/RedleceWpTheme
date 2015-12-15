@@ -1,16 +1,18 @@
-<?php
+<?php get_header(); ?>
 
-/*
-  Template Name: Pagina Red
-*/
+  <?php
 
-get_header(); ?>
+  $args = array(
+    'post_type' => 'page',
+    'posts_per_page' => 1,
+    'post__in' => array(10)
+  );
 
-	<?php
+  $lastBlog = new WP_Query( $args );
 
-	if( have_posts() ):
+  if( $lastBlog->have_posts() ):
 
-		while( have_posts() ): the_post(); ?>
+    while( $lastBlog->have_posts() ): $lastBlog->the_post();?>
 
     <div class="section anaranjadito">
       <div class="container">
@@ -25,6 +27,7 @@ get_header(); ?>
     <?php endwhile;
 
   endif;
+
   wp_reset_postdata();
 
   ?>
@@ -32,13 +35,14 @@ get_header(); ?>
 <div class="section">
 
   <div class="row">
-		<div class="col s2 offset-s1 hide-on-med-and-down">
+    <div class="col s2 offset-s1 hide-on-med-and-down">
 			<br>
 			<?php
 			$args = array(
 				'post_type' => 'pais',
 				'category__in' => array( 7 ),
-				'order' => 'ASC'
+        'orderby' => 'title',
+        'order' => 'ASC'
 			);
 			$my_query = new WP_Query($args);
 
@@ -61,16 +65,9 @@ get_header(); ?>
   <div class="col s12 l7">
     <?php
 
-  	$args = array(
-  		'post_type' => 'pais',
-  		'category__in' => array( 7 )
-  	);
+  	if( have_posts() ):
 
-  	$lastBlog = new WP_Query( $args );
-
-  	if( $lastBlog->have_posts() ):
-
-  		while( $lastBlog->have_posts() ): $lastBlog->the_post();?>
+  		while( have_posts() ): the_post(); ?>
 
   			  <?php get_template_part('content','card'); ?>
 
@@ -78,13 +75,23 @@ get_header(); ?>
 
   	endif;
 
-  	wp_reset_postdata();
-
   	?>
   </div>
-</div>
 
+    <div class="col s12 l7 offset-l3">
+<?php
 
+if( have_posts() ):
+
+  while( have_posts() ): the_post(); ?>
+            <?php the_content(); ?>
+  <?php endwhile;
+
+endif;
+
+?>
+    </div>
+  </div>
 </div>
 
 <div class="section cremita">
@@ -96,7 +103,7 @@ get_header(); ?>
 			$args = array(
 				'post_type' => 'page',
 				'posts_per_page' => 2,
-				'post__in' => array(13,20)
+				'post__in' => array(10,14)
 			);
 
 			$lastBlog = new WP_Query( $args );

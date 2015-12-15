@@ -11,16 +11,15 @@
         the_post_thumbnail('full'); ?>
     <?php endif; ?></a>
 
-    <span class="card-title"><?php the_field( 'institucion' ); ?></span></a>
   </div>
   <div class="card-action white-text">
-    <p><?php the_field( 'sitio_web' ); ?><br>
+    <p><?php the_field( 'titulo' ); ?><br>
       <hr class="white-hr">
-      <?php the_field( 'direccion' ); ?><br>
+      Editado por: <?php the_field( 'editado_por' ); ?><br>
       <!-- (1020) Ciudad Autonoma <br> -->
       <!-- de Buenos Aires <br> -->
       <hr class="white-hr">
-      <?php the_field( 'numero_de_contacto' ); ?>
+      Año: <?php the_field( 'anho' ); ?>
     </p>
   </div>
 </div>
