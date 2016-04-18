@@ -68,40 +68,37 @@ endif;
 	</div>
 </div>
 
-			<div class="section white">
-				<div class="container margin">
-					<div class="row">
+<div class="section white">
+	<div class="container margin">
+		<div class="row">
 
+			<div class="col s12">
 
+				<h4 class="red-text text-accent-4 center">ULTIMAS NOTICIAS</h4>
+				<br><br>
+				<?php
 
+				$args = array(
+					'type' => 'post',
+					'posts_per_page' => 6
+				);
 
-	  <div class="col s12">
+				$otherPost = new WP_Query( $args );
 
-		  <h4 class="red-text text-accent-4 center">ULTIMAS NOTICIAS</h4>
-		  <br><br>
-      <?php
+				if( $otherPost->have_posts() ):
 
-      $args = array(
-        'type' => 'post',
-        'posts_per_page' => 6
-      );
+					while( $otherPost->have_posts() ): $otherPost->the_post();?>
 
-      $otherPost = new WP_Query( $args );
+					<?php get_template_part('content','noticias'); ?>
 
-      if( $otherPost->have_posts() ):
+				<?php endwhile;
 
-        while( $otherPost->have_posts() ): $otherPost->the_post();?>
+			endif;
 
-        <?php get_template_part('content','noticias'); ?>
+			?>
+		</div>
 
-      <?php endwhile;
-
-    endif;
-
-    ?>
 	</div>
-
-</div>
 
 </div>
 

@@ -1,0 +1,284 @@
+$anaranjadito: #e7b909;
+$rojo: #D50000;
+
+@mixin images {
+  object-fit: cover;
+  height: 100%;
+}
+
+nav ul a,
+nav .brand-logo {
+  color: $rojo !important;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+  .section {
+    width: 100%;
+  }
+}
+
+.section {
+    padding-top: 0;
+    &.cremita {
+      padding-top: 1rem;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+  .material-icons {
+    font-size: inherit;
+  }
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+/*
+===============================================
+                CUSTOM STYLE
+===============================================
+*/
+
+@font-face {
+  font-family: 'Rambla';
+  src: url('../fonts/Rambla/Rambla-Regular.eot');
+  src: url('../fonts/Rambla/Rambla-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Rambla/Rambla-Regular.woff2') format('woff2'),
+       url('../fonts/Rambla/Rambla-Regular.woff') format('woff'),
+       url('../fonts/Rambla/Rambla-Regular.ttf') format('truetype'),
+       url('../fonts/Rambla/Rambla-Regular.svg#Rambla-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rambla-Bold';
+  src: url('../fonts/Rambla/Rambla-Bold.eot');
+  src: url('../fonts/Rambla/Rambla-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Rambla/Rambla-Bold.woff2') format('woff2'),
+       url('../fonts/Rambla/Rambla-Bold.woff') format('woff'),
+       url('../fonts/Rambla/Rambla-Regular.ttf') format('truetype'),
+       url('../fonts/Rambla/Rambla-Bold.svg#Rambla-Bold') format('svg');
+  font-weight: bold;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'FiraSans';
+  src: url('../fonts/FiraSans/FiraSans-Regular.eot');
+  src: url('../fonts/FiraSans/FiraSans-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/FiraSans/FiraSans-Regular.woff2') format('woff2'),
+       url('../fonts/FiraSans/FiraSans-Regular.woff') format('woff'),
+       url('../fonts/FiraSans/FiraSans-Regular.ttf') format('truetype'),
+       url('../fonts/FiraSans/FiraSans-Regular.svg#FiraSans-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.anaranjadito {
+    background-color: $anaranjadito !important;
+}
+
+.anaranjadito-text {
+   color: $anaranjadito !important;
+}
+
+.cremita {
+    background-color: #f6eccc !important;
+}
+.cremita-claro {
+    background-color: #fcf7ed !important;
+}
+html {
+  font-family: 'Rambla';
+}
+
+nav {
+  border-top: 10px solid $rojo;
+  height: 200px;
+  line-height: 200px;
+}
+
+a#logo-container.brand-logo img {
+  padding-top: 40px;
+  width: 250px;
+}
+
+nav ul a {
+  font-size: 1.2rem;
+  padding: 0 7.5px;
+}
+
+li > a {
+  text-transform: uppercase;
+}
+
+.header-title {
+  font-weight: bold;
+}
+
+h4, h5 {
+  font-weight: 600;
+  letter-spacing: 1.4px;
+}
+
+h6 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+p.center-align, p.left-align {
+  font-size: 1.3rem;
+}
+
+.dotted {
+  border-top: 2px dotted $rojo;
+}
+
+.container.margin {
+  margin: 30px auto;
+  margin-bottom: 0;
+}
+
+.footer-img {
+  width: 80%;
+}
+
+footer.page-footer {
+  border-top: 10px solid $rojo;
+  padding-top: 60px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 10px;
+}
+
+p.footer {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+nav ul li {
+  &:hover, &.active {
+    background-color: transparent;
+  }
+}
+
+img.responsive-img {
+  .col.m3 &, .col.m4 &,
+  .col.m3 a &, .col.m4 a & {
+    @include images;
+  }
+}
+
+.thumb-titular {
+  width: 100%;
+}
+
+.col {
+  &.m3.image, &.m4.image {
+    height: 250px;
+  }
+}
+
+.image-container {
+  height: 260px;
+  overflow: hidden;
+}
+
+.titular {
+  height: 550px;
+  border-top: 20px solid $anaranjadito;
+}
+
+hr {
+  border: 0;
+  background-color: $rojo !important;
+  height: 1px;
+}
+.white-hr {
+  border: 0;
+  background-color: #FFF !important;
+  height: 1px;
+}
+.dotted.center span {
+  padding: 5px 10px;
+  font-size: 20px;
+  position: relative;
+  top: -10px;
+}
+
+td {
+  font-size: 17px;
+  padding: 5px 5px;
+}
+
+a {
+  color: $rojo !important;
+}
+
+.row .col.s2 {
+  margin-left: 8.33333%;
+}
+
+.excerpt {
+  width: 350px;
+  margin: 0 auto;
+  font-size: 1.6rem !important;
+}
+
+.uppercase-text {
+  text-transform: uppercase;
+}
+
+.card-image img {
+  object-position: center;
+  @include images;
+}
+
+.noticias-header {
+  height: 50px;
+}
+
+.date {
+  font-size: 1rem;
+  font-weight: normal;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.subtitulo {
+  font-size: 2rem;
+  width: 85%;
+  margin: 0 auto;
+}
+
+#wpadminbar a {
+  color: #eee !important;
+}
