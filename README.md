@@ -1,6 +1,27 @@
 # RedleceWpTheme
-Wordpress Theme for Redlece web
+Wordpress Theme for Redlece web **Beta Version**
+
 www.redlece.net
+
+### Install
+
+```
+git clone on your /wordpress-installation/wp-content/themes/ directory
+```
+
+```
+bower install
+```
+**if you don't have bower here's a guide**
+
+http://bower.io/
+
+### Wordpress Plugins used
+
+https://wordpress.org/plugins/wp-heading-buttons/
+
+https://wordpress.org/plugins/advanced-custom-fields/
+
 
 *****************************************************************
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
