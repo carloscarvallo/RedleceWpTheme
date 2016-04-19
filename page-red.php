@@ -96,7 +96,7 @@ get_header(); ?>
 			$args = array(
 				'post_type' => 'page',
 				'posts_per_page' => 2,
-				'post__in' => array(13,20)
+				'post__in' => array(10,14)
 			);
 
 			$lastBlog = new WP_Query( $args );
