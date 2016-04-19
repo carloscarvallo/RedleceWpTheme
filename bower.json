@@ -1,0 +1,20 @@
+{
+  "name": "redlecetheme",
+  "homepage": "https://github.com/carloscarvallo/RedleceWpTheme",
+  "authors": [
+    "Carlos Carvallo <carloscarvallo87@gmail.com>"
+  ],
+  "description": "Wordpress Theme for Redlece",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "Materialize": "materialize#~0.97.1"
+  }
+}
