@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title>Red Latinoamericana de Educación en Contextos de Encierro</title>
 		<meta name="description" content="Red Latinoamericana de Educación en Contextos de Encierro" />
+		<link rel="icon" type="image/png" href="<?php bloginfo('template_url');?>/images/favicon.png">
 		<link rel="author" type="text/plain" href="<?php bloginfo('template_url')?>/humans.txt "/>
 		<link rel="sitemap" type="application/xml" title="Sitemap" href="<?php bloginfo('template_url')?>/sitemap.xml" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
