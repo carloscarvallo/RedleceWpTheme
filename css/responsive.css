@@ -23,5 +23,13 @@
   footer.page-footer {
     padding-top: 10px;
     padding-bottom: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .right-align {
+    text-align: center;
+  }
+  .custom-padding {
+    padding: 15px !important;
   }
 }

@@ -32,7 +32,8 @@ get_header(); ?>
 <div class="section">
 
   <div class="row">
-		<div class="col s2 offset-s1 hide-on-med-and-down">
+	  <!-- COLUMNA 1 -->
+		<div class="col l2 m12 s12">
 			<br>
 			<?php
 			$args = array(
@@ -57,8 +58,8 @@ get_header(); ?>
 				wp_reset_postdata();
 				?>
 		</div>
-
-  <div class="col s12 l7">
+  <!-- COLUMNA 2 -->
+  <div class="col l7 m12 s12">
     <?php
 
   	$args = array(
