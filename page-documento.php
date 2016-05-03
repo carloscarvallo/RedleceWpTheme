@@ -62,7 +62,8 @@ get_header(); ?>
   	//MOSTRARA SOLO UNA CATEGORIA
   	$args = array(
   		'post_type' => 'documento',
-  		'category__in' => array( 8 )
+  		'category__in' => array( 8 ),
+		'order'   => 'ASC'
   	);
 
   	$lastBlog = new WP_Query( $args );
