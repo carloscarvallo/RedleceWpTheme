@@ -37,7 +37,8 @@ get_header(); ?>
 			<?php
 			$args = array(
 				'post_type' => 'documento',
-				'category__in' => array( 8 )
+				'category__in' => array( 8 ),
+				'order' => 'ASC'
 			);
 			$my_query = new WP_Query($args);
 
