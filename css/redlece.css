@@ -199,6 +199,9 @@ a {
   font-size: 2rem;
   width: 85%;
   margin: 0 auto; }
+  
+.custom-padding {
+    padding: 0px !important; }
 
 #wpadminbar a {
   color: #eee !important; }
