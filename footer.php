@@ -2,12 +2,12 @@
 			<footer id="contacto" class="page-footer cremita-claro section scrollspy">
 				<?php wp_footer(); ?>
 		      <div class="row">
-		        <div class="col l3 s12 center custom-padding">
+		        <div class="col l2 s12 center custom-padding">
 					<a href="http://www.redlece.net">
 		        		<img class="footer-img" src="<?php bloginfo('template_url')?>/images/1.png">
 					</a>
 		        </div>
-				<div class="col l4 s12 center custom-padding">
+				<div class="col l3 s12 center custom-padding">
 		        	<a href="http://www.oei.es/">
 		        		<img class="footer-img" src="<?php bloginfo('template_url')?>/images/logo-oei-bilingue.png">
 		        	</a>
