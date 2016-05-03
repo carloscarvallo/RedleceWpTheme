@@ -63,7 +63,8 @@ get_header(); ?>
 
   	$args = array(
   		'post_type' => 'pais',
-  		'category__in' => array( 7 )
+  		'category__in' => array( 7 ),
+		'order'   => 'ASC'
   	);
 
   	$lastBlog = new WP_Query( $args );
