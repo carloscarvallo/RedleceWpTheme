@@ -301,6 +301,6 @@ function documento_init() {
     ======================================================
 */
 
-require get_template_directory() . '/inc/walker.php';
+//require get_template_directory() . '/inc/walker.php';
 
 ?>

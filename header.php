@@ -33,8 +33,8 @@
             wp_nav_menu(array(
               'theme_location' => 'header',
               'container' => false,
-              'menu_class' => 'right hide-on-med-and-down',
-							'walker' => new Walker_Nav_Header()
+              'menu_class' => 'right hide-on-med-and-down'
+							//'walker' => new Walker_Nav_Header()
               )
             );
           ?>
