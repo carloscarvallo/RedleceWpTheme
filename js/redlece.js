@@ -192,7 +192,15 @@ through which recipients can access the Corresponding Source. */
         }
       });
     });
-
-
+    
+    // agregar barra al menu
+    function addBar(element) {
+        var bar = $(element);
+        $('#menu-menu-navegacion').find('li').after(bar);
+        $('#menu-menu-navegacion').find('li').last().remove();
+    }
+    
+    addBar('<li><a href="#">/</a></li>');
+    
   }); // end of document ready
 })(jQuery); // end of jQuery name space
