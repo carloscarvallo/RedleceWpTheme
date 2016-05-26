@@ -4,9 +4,9 @@
 		<meta charset="utf-8">
 		<title>Red Latinoamericana de Educación en Contextos de Encierro</title>
 		<meta name="description" content="Red Latinoamericana de Educación en Contextos de Encierro" />
-		<link rel="icon" type="image/png" href="<?php bloginfo('template_url');?>/images/favicon.png">
-		<link rel="author" type="text/plain" href="<?php bloginfo('template_url')?>/humans.txt "/>
-		<link rel="sitemap" type="application/xml" title="Sitemap" href="<?php bloginfo('template_url')?>/sitemap.xml" />
+		<link rel="icon" type="image/png" href="<?php echo esc_url( get_template_directory_uri() );?>/images/favicon.png">
+		<link rel="author" type="text/plain" href="<?php echo esc_url( get_template_directory_uri() );?>/humans.txt "/>
+		<link rel="sitemap" type="application/xml" title="Sitemap" href="<?php echo esc_url( get_template_directory_uri() );?>/sitemap.xml" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -28,7 +28,7 @@
 
 		<nav class="white" role="navigation">
       <div class="nav-wrapper container">
-        <a id="logo-container" href="<?php echo bloginfo('url'); ?>" class="brand-logo"> <img src="<?php bloginfo('template_url')?>/images/logon.jpg" alt="Logo"> </a>
+        <a id="logo-container" href="<?php echo esc_url( home_url() ); ?>" class="brand-logo"> <img src="<?php echo esc_url( get_template_directory_uri() );?>/images/logon.jpg" alt="Logo"> </a>
           <?php
             wp_nav_menu(array(
               'theme_location' => 'header',

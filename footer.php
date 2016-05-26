@@ -4,16 +4,16 @@
 		      <div class="row">
 		        <div class="col l2 s12 center custom-padding">
 					<a href="http://www.redlece.net">
-		        		<img class="footer-img" src="<?php bloginfo('template_url')?>/images/1.png">
+		        		<img class="footer-img" src="<?php echo esc_url( get_template_directory_uri() );?>/images/1.png">
 					</a>
 		        </div>
 				<div class="col l3 s12 center custom-padding">
 		        	<a href="http://www.oei.es/">
-		        		<img class="footer-img" src="<?php bloginfo('template_url')?>/images/logo-oei-bilingue.png">
+		        		<img class="footer-img" src="<?php echo esc_url( get_template_directory_uri() );?>/images/logo-oei-bilingue.png">
 		        	</a>
 		        </div>
 		        <div class="col l2 s12 center custom-padding">
-		            <img class="footer-img" src="<?php bloginfo('template_url')?>/images/2.png">
+		            <img class="footer-img" src="<?php echo esc_url( get_template_directory_uri() );?>/images/2.png">
 		        </div>
 		        <div class="col l3 s12 center custom-padding">
 		          <h6 class="right-align red-text text-accent-4">Red Latinoamericana de Educación <br> en Contextos de Encierro</h6>
