@@ -19,7 +19,7 @@
       <!-- (1020) Ciudad Autonoma <br> -->
       <!-- de Buenos Aires <br> -->
       <hr class="white-hr">
-      A&ntilde;o: <?php the_field( 'anho' ); ?>
+      <!-- A&ntilde;o: <?php the_field( 'anho' ); ?> -->
     </p>
   </div>
 </div>
