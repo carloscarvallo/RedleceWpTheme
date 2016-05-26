@@ -16,8 +16,8 @@
 		            <img class="footer-img" src="<?php echo esc_url( get_template_directory_uri() );?>/images/2.png">
 		        </div>
 		        <div class="col l3 s12 center custom-padding">
-		          <h6 class="right-align red-text text-accent-4">Red Latinoamericana de Educación <br> en Contextos de Encierro</h6>
-		          <p class="right-align red-text text-accent-4 footer">Humaitá 525 c/ 14 de mayo <br> Teléfono (+595 21) 450 903/5</p>
+		          <h6 class="right-align red-text text-accent-4">Red Latinoamericana de Educaci&oacute;n <br> en Contextos de Encierro</h6>
+		          <p class="right-align red-text text-accent-4 footer">Humait&aacute; 525 c/ 14 de mayo <br> Tel&eacute;fono (+595 21) 450 903/5</p>
 		        </div>
 		      </div>
 		  </footer>
