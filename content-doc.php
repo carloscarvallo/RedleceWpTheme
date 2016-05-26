@@ -18,7 +18,7 @@
       Editado por: <?php the_field( 'editado_por' ); ?><br>
       <!-- (1020) Ciudad Autonoma <br> -->
       <!-- de Buenos Aires <br> -->
-      <hr class="white-hr">
+      <!-- <hr class="white-hr"> -->
       <!-- A&ntilde;o: <?php the_field( 'anho' ); ?> -->
     </p>
   </div>
