@@ -2,7 +2,7 @@
 <html lang="es">
 	<head>
 		<meta charset="utf-8">
-		<title>Red Latinoamericana de Educaci&oacute;n en Contextos de Encierro</title>
+		<title><?php wp_title(); ?></title>
 		<meta name="description" content="Red Latinoamericana de Educaci&oacute;n en Contextos de Encierro" />
 		<link rel="icon" type="image/png" href="<?php echo esc_url( get_template_directory_uri() );?>/images/favicon.png">
 		<link rel="author" type="text/plain" href="<?php echo esc_url( get_template_directory_uri() );?>/humans.txt "/>

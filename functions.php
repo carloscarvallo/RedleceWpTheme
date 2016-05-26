@@ -303,4 +303,20 @@ function documento_init() {
 
 //require get_template_directory() . '/inc/walker.php';
 
+/*
+	=========================================================
+	Customize the title for the home page, if one is not set.
+	=========================================================
+*/
+
+add_filter( 'wp_title', 'wpdocs_hack_wp_title_for_home' );
+
+function wpdocs_hack_wp_title_for_home( $title )
+{
+  if ( empty( $title ) && ( is_home() || is_front_page() ) ) {
+    $title = __( 'Inicio', 'textdomain' ) . ' | ' . get_bloginfo( 'description' );
+  }
+  return $title;
+}
+
 ?>
